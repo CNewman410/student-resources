@@ -256,23 +256,81 @@
         topic: "Python",
         subtitle: "Fundamentals, practice, and full courses",
         items: [
-          { title: "Python for Everybody (py4e)", url: "https://www.py4e.com/lessons", tag: "course", desc: "Excellent beginner-friendly course + lessons." },
-          { title: "CS50’s Introduction to Programming with Python", url: "https://cs50.harvard.edu/python/", tag: "course", desc: "Harvard’s CS50P — solid structure and assignments." },
-          { title: "Python Programming 2023 (MOOC.fi)", url: "https://programming-23.mooc.fi/", tag: "course", desc: "Great practice-driven MOOC with exercises." },
-          { title: "MIT OCW: Intro to CS & Programming in Python", url: "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/", tag: "lectures", desc: "MIT-level lectures and materials." },
-          { title: "Google: Python Setup", url: "https://developers.google.com/edu/python/set-up", tag: "setup", desc: "Environment setup guidance from Google." }
+            { title: "Python for Everybody (py4e)", url: "https://www.py4e.com/lessons", tag: "course", desc: "Excellent beginner-friendly course + lessons." },
+            { title: "CS50’s Introduction to Programming with Python", url: "https://cs50.harvard.edu/python/", tag: "course", desc: "Harvard’s CS50P — solid structure and assignments." },
+            { title: "Python Programming 2023 (MOOC.fi)", url: "https://programming-23.mooc.fi/", tag: "course", desc: "Great practice-driven MOOC with exercises." },
+            { title: "MIT OCW: Intro to CS & Programming in Python", url: "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/", tag: "lectures", desc: "MIT-level lectures and materials." },
+            { title: "Google: Python Setup", url: "https://developers.google.com/edu/python/set-up", tag: "setup", desc: "Environment setup guidance from Google." },
+            { title: "Python Docs (Official)", url: "https://docs.python.org/3/", tag: "docs", desc: "Official Python documentation and library reference." },
+            { title: "W3Schools Python", url: "https://www.w3schools.com/python/", tag: "tutorial", desc: "Quick examples and friendly explanations." },
+            { title: "LeetCode (Easy)", url: "https://leetcode.com/problemset/", tag: "practice", desc: "Use filters → difficulty Easy for fundamentals." },
+            { title: "HackerRank: Python", url: "https://www.hackerrank.com/domains/python", tag: "practice", desc: "Beginner-friendly Python drills." },
+            { title: "PEP 8 Style Guide", url: "https://peps.python.org/pep-0008/", tag: "style", desc: "Readable Python formatting conventions." }
         ]
       },
       {
-        topic: "HTML",
+        topic: "Web Dev (HTML/CSS/JS)",
         subtitle: "Structure, semantics, accessibility",
         items: [
-          { title: "MDN: HTML (Reference + Guides)", url: "https://developer.mozilla.org/en-US/docs/Web/HTML", tag: "reference", desc: "The best all-around HTML documentation." },
-          { title: "freeCodeCamp: Responsive Web Design", url: "https://www.freecodecamp.org/learn/2022/responsive-web-design/", tag: "practice", desc: "Hands-on drills and projects." },
-          { title: "W3Schools: HTML Tutorial", url: "https://www.w3schools.com/html/", tag: "tutorial", desc: "Quick examples and a friendly pace." },
-          { title: "WebAIM: Introduction to Web Accessibility", url: "https://webaim.org/intro/", tag: "a11y", desc: "Clear basics for accessible HTML patterns." }
+            { title: "MDN Web Docs (All Web)", url: "https://developer.mozilla.org/", tag: "reference", desc: "Best reference for HTML, CSS, JS, and the web platform." },
+            { title: "The Odin Project", url: "https://www.theodinproject.com/", tag: "course", desc: "Project-based web dev pathway (great structure)." },
+            { title: "freeCodeCamp", url: "https://www.freecodecamp.org/learn/", tag: "practice", desc: "Hands-on lessons + mini projects." },
+            { title: "Flexbox Froggy", url: "https://flexboxfroggy.com/", tag: "game", desc: "Practice Flexbox with a quick game." },
+            { title: "Grid Garden", url: "https://cssgridgarden.com/", tag: "game", desc: "Practice CSS Grid with a quick game." },
+            { title: "JavaScript.info", url: "https://javascript.info/", tag: "course", desc: "Deep and well-organized JS explanations." }
         ]
-      }
+      },
+      {
+        topic: "Git + GitHub",
+        subtitle: "Version control basics and workflows",
+        items: [
+            { title: "Git Handbook (GitHub)", url: "https://guides.github.com/introduction/git-handbook/", tag: "guide", desc: "Simple intro to Git concepts." },
+            { title: "GitHub Skills (Interactive)", url: "https://skills.github.com/", tag: "interactive", desc: "Hands-on mini courses inside GitHub." },
+            { title: "Oh My Git! (Game)", url: "https://ohmygit.org/", tag: "game", desc: "Learn Git concepts visually." }
+        ]
+    },
+    {
+        topic: "Databases + SQL",
+        subtitle: "SQL basics, querying, and practice",
+        items: [
+            { title: "SQLBolt", url: "https://sqlbolt.com/", tag: "practice", desc: "Short lessons + interactive SQL exercises." },
+            { title: "W3Schools SQL", url: "https://www.w3schools.com/sql/", tag: "tutorial", desc: "Quick SQL reference with examples." },
+            { title: "PostgreSQL Tutorial", url: "https://www.postgresqltutorial.com/", tag: "tutorial", desc: "Clear SQL + Postgres fundamentals." }
+        ]
+    },
+    {
+        topic: "Cybersecurity",
+        subtitle: "Foundations and awareness",
+        items: [
+            { title: "OWASP Top 10", url: "https://owasp.org/www-project-top-ten/", tag: "reference", desc: "Most common web app security risks (must-know list)." },
+            { title: "NIST Cybersecurity Framework (CSF)", url: "https://www.nist.gov/cyberframework", tag: "framework", desc: "High-level structure for cybersecurity thinking." },
+            { title: "Have I Been Pwned", url: "https://haveibeenpwned.com/", tag: "tool", desc: "Check if emails/passwords appear in known breaches." }
+        ]
+    },
+    {
+        topic: "AI Fundamentals",
+        subtitle: "Core ideas, vocabulary, and real-world examples",
+        items: [
+            { title: "Google Machine Learning Glossary", url: "https://developers.google.com/machine-learning/glossary", tag: "glossary", desc: "Plain-language definitions for ML/AI terms." },
+            { title: "3Blue1Brown: Neural Networks", url: "https://www.3blue1brown.com/topics/neural-networks", tag: "videos", desc: "Visual explanation of neural nets (very student-friendly)." },
+            { title: "Kaggle Learn (Intro)", url: "https://www.kaggle.com/learn", tag: "practice", desc: "Short, guided lessons on data + ML basics." },
+            { title: "Elements of AI", url: "https://www.elementsofai.com/", tag: "course", desc: "Non-technical AI course (great for beginners)." }
+        ]
+    },
+    {
+        topic: "Accessibility",
+        subtitle: "Build things everyone can use",
+        items: [
+            { title: "WebAIM: Intro to Accessibility", url: "https://webaim.org/intro/", tag: "a11y", desc: "Clear basics and common patterns." },
+            { title: "WCAG Quick Reference", url: "https://www.w3.org/WAI/WCAG21/quickref/", tag: "standards", desc: "Checklist-style reference for accessibility requirements." },
+            { title: "ARIA Authoring Practices", url: "https://www.w3.org/WAI/ARIA/apg/", tag: "patterns", desc: "How to implement accessible UI components." }
+        ]
+    }
+
+
+
+
+
     ];
 
     const $sections = document.getElementById("sections");
