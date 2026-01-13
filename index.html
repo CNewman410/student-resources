@@ -55,4 +55,357 @@
       border: 1px solid rgba(255,255,255,.14);
       background: rgba(255,255,255,.06);
       border-radius: 14px;
-      box-shadow
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.06);
+    }
+    .search:focus-within{ box-shadow: var(--ring), inset 0 1px 0 rgba(255,255,255,.06); border-color: rgba(125,211,252,.35); }
+    .search input{
+      width:100%; border: 0; outline: none;
+      background: transparent; color: var(--text); font-size: 14px;
+    }
+    .search input::placeholder{ color: rgba(255,255,255,.5); }
+    .pillbar{
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 0 18px 14px;
+      display:flex; flex-wrap: wrap; gap: 8px;
+    }
+    .pill{
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: var(--text);
+      padding: 7px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      cursor: pointer;
+      user-select: none;
+      transition: transform .08s ease, background .12s ease, border-color .12s ease;
+    }
+    .pill:hover{ transform: translateY(-1px); background: rgba(255,255,255,.09); }
+    .pill[aria-pressed="true"]{ border-color: rgba(147,197,253,.45); background: rgba(147,197,253,.12); }
+    .hero{
+      margin-top: 14px;
+      padding: 26px 22px;
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.14);
+      background: linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.04));
+      box-shadow: var(--shadow);
+    }
+    .hero h2{ margin: 0 0 8px; font-size: 28px; line-height: 1.12; }
+    .hero p{ margin: 0; color: var(--muted); max-width: 72ch; font-size: 14px; }
+    .meta{ display:flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; color: rgba(255,255,255,.75); font-size: 12px; }
+    .badge{ display:inline-flex; align-items:center; gap: 8px; padding: 7px 10px; border-radius: 999px; border: 1px solid rgba(255,255,255,.14); background: rgba(255,255,255,.06); }
+    .dot{ width: 8px; height: 8px; border-radius: 99px; background: #93c5fd; box-shadow: 0 0 0 3px rgba(147,197,253,.18); }
+    .grid{ margin-top: 18px; display:grid; grid-template-columns: 1fr; gap: 14px; }
+    @media (min-width: 860px){ .grid{ grid-template-columns: 1fr 1fr; } }
+    details.section{
+      border-radius: var(--radius);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      overflow: hidden;
+      box-shadow: 0 16px 50px rgba(0,0,0,.25);
+    }
+    details.section > summary{
+      list-style: none;
+      cursor: pointer;
+      padding: 16px 16px;
+      display:flex;
+      justify-content: space-between;
+      align-items:center;
+      gap: 10px;
+      background: rgba(255,255,255,.04);
+      border-bottom: 1px solid rgba(255,255,255,.10);
+    }
+    details.section > summary::-webkit-details-marker{ display:none; }
+    .sect-left{ display:flex; flex-direction: column; gap: 3px; }
+    .sect-title{ font-weight: 800; }
+    .sect-sub{ font-size: 12px; color: var(--muted); }
+    .chev{
+      width: 36px; height: 36px;
+      display:grid; place-items:center;
+      border-radius: 12px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      flex: 0 0 auto;
+      transition: transform .12s ease;
+    }
+    details[open] .chev{ transform: rotate(180deg); }
+    .cards{
+      padding: 14px 14px 18px;
+      display:grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    @media (min-width: 520px){ .cards{ grid-template-columns: 1fr 1fr; } }
+    .card{
+      border-radius: var(--radius-sm);
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.05);
+      padding: 12px 12px;
+      transition: transform .08s ease, background .12s ease, border-color .12s ease;
+    }
+    .card:hover{
+      transform: translateY(-1px);
+      background: rgba(255,255,255,.08);
+      border-color: rgba(255,255,255,.18);
+    }
+    .card a{
+      display:flex; flex-direction: column; gap: 6px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .card-title{
+      font-weight: 750;
+      font-size: 14px;
+      display:flex; align-items:center; gap: 8px;
+    }
+    .tag{
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      color: rgba(255,255,255,.78);
+      white-space: nowrap;
+    }
+    .desc{ font-size: 12px; color: var(--muted); margin: 0; }
+    .url{ font-size: 11px; color: rgba(255,255,255,.55); overflow:hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .empty{
+      margin-top: 16px;
+      padding: 18px;
+      border-radius: var(--radius);
+      border: 1px dashed rgba(255,255,255,.22);
+      color: rgba(255,255,255,.75);
+      background: rgba(255,255,255,.04);
+      display:none;
+    }
+    footer{
+      margin-top: 28px;
+      color: rgba(255,255,255,.6);
+      font-size: 12px;
+      display:flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    footer a{ color: rgba(255,255,255,.75); }
+    .kbd{
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      font-size: 11px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.06);
+      padding: 2px 6px;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <path d="M12 2l9 5v10l-9 5-9-5V7l9-5Z" stroke="white" stroke-width="1.8"/>
+            <path d="M7.5 9.5h9M7.5 14.5h9" stroke="white" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <div>
+          <h1>Student Resources</h1>
+          <p>Curated links for success in your courses</p>
+        </div>
+      </div>
+
+      <div class="search" role="search">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path d="M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z" stroke="white" opacity=".85" stroke-width="1.7"/>
+          <path d="M16.5 16.5 21 21" stroke="white" opacity=".85" stroke-width="1.7" stroke-linecap="round"/>
+        </svg>
+        <input id="searchInput" type="search" placeholder="Search: python, html, debugging, tutorials, practice…" autocomplete="off" />
+      </div>
+    </div>
+
+    <div class="pillbar" id="pillbar" aria-label="Topic filters"></div>
+  </div>
+
+  <main class="wrap">
+    <section class="hero">
+      <h2>Everything in one place.</h2>
+      <p>Use these links to review key concepts, practice skills, and find high-quality explanations.</p>
+      <div class="meta">
+        <div class="badge"><span class="dot"></span><span><strong id="countShown">0</strong> resources shown</span></div>
+        <div class="badge"><span class="dot" style="background:#86efac; box-shadow:0 0 0 3px rgba(134,239,172,.18);"></span><span>Tip: try <span class="kbd">practice</span> or <span class="kbd">cheatsheet</span></span></div>
+      </div>
+    </section>
+
+    <section class="grid" id="sections"></section>
+
+    <div class="empty" id="emptyState">
+      <strong>No matches.</strong>
+      <div style="margin-top:6px;">Try a different search term, or clear filters.</div>
+    </div>
+
+    <footer>
+      <div>Last updated: <span id="lastUpdated"></span></div>
+      <div><a href="#" id="clearAll">Clear search & filters</a></div>
+    </footer>
+  </main>
+
+  <script>
+    const RESOURCE_DATA = [
+      {
+        topic: "Python",
+        subtitle: "Fundamentals, practice, and full courses",
+        items: [
+          { title: "Python for Everybody (py4e)", url: "https://www.py4e.com/lessons", tag: "course", desc: "Excellent beginner-friendly course + lessons." },
+          { title: "CS50’s Introduction to Programming with Python", url: "https://cs50.harvard.edu/python/", tag: "course", desc: "Harvard’s CS50P — solid structure and assignments." },
+          { title: "Python Programming 2023 (MOOC.fi)", url: "https://programming-23.mooc.fi/", tag: "course", desc: "Great practice-driven MOOC with exercises." },
+          { title: "MIT OCW: Intro to CS & Programming in Python", url: "https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/", tag: "lectures", desc: "MIT-level lectures and materials." },
+          { title: "Google: Python Setup", url: "https://developers.google.com/edu/python/set-up", tag: "setup", desc: "Environment setup guidance from Google." }
+        ]
+      },
+      {
+        topic: "HTML",
+        subtitle: "Structure, semantics, accessibility",
+        items: [
+          { title: "MDN: HTML (Reference + Guides)", url: "https://developer.mozilla.org/en-US/docs/Web/HTML", tag: "reference", desc: "The best all-around HTML documentation." },
+          { title: "freeCodeCamp: Responsive Web Design", url: "https://www.freecodecamp.org/learn/2022/responsive-web-design/", tag: "practice", desc: "Hands-on drills and projects." },
+          { title: "W3Schools: HTML Tutorial", url: "https://www.w3schools.com/html/", tag: "tutorial", desc: "Quick examples and a friendly pace." },
+          { title: "WebAIM: Introduction to Web Accessibility", url: "https://webaim.org/intro/", tag: "a11y", desc: "Clear basics for accessible HTML patterns." }
+        ]
+      }
+    ];
+
+    const $sections = document.getElementById("sections");
+    const $pillbar = document.getElementById("pillbar");
+    const $search = document.getElementById("searchInput");
+    const $empty = document.getElementById("emptyState");
+    const $countShown = document.getElementById("countShown");
+    const $lastUpdated = document.getElementById("lastUpdated");
+    const $clearAll = document.getElementById("clearAll");
+
+    const state = { q: "", topic: "All" };
+
+    const escapeHtml = (s) => String(s)
+      .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")
+      .replaceAll('"',"&quot;").replaceAll("'","&#039;");
+
+    const domainFromUrl = (url) => {
+      try { return new URL(url).hostname.replace(/^www\./,""); }
+      catch { return url; }
+    };
+
+    function buildPills(){
+      const topics = ["All", ...RESOURCE_DATA.map(r => r.topic)];
+      $pillbar.innerHTML = topics.map(t => `
+        <button class="pill" type="button" data-topic="${escapeHtml(t)}" aria-pressed="${t==="All"}">${escapeHtml(t)}</button>
+      `).join("");
+
+      $pillbar.querySelectorAll(".pill").forEach(btn => {
+        btn.addEventListener("click", () => {
+          state.topic = btn.getAttribute("data-topic");
+          $pillbar.querySelectorAll(".pill").forEach(b => b.setAttribute("aria-pressed", "false"));
+          btn.setAttribute("aria-pressed","true");
+          render();
+        });
+      });
+    }
+
+    function flatten(){
+      const out = [];
+      for(const group of RESOURCE_DATA){
+        for(const it of group.items){
+          out.push({ ...it, __topic: group.topic, __subtitle: group.subtitle });
+        }
+      }
+      return out;
+    }
+
+    function matches(item){
+      const q = state.q.trim().toLowerCase();
+      const topicOk = state.topic === "All" ? true : item.__topic === state.topic;
+      if(!topicOk) return false;
+      if(!q) return true;
+      const hay = [item.title, item.tag||"", item.desc||"", item.url||"", item.__topic||""].join(" ").toLowerCase();
+      return hay.includes(q);
+    }
+
+    function render(){
+      const all = flatten();
+      const filtered = all.filter(matches);
+
+      const byTopic = new Map();
+      for(const item of filtered){
+        if(!byTopic.has(item.__topic)){
+          byTopic.set(item.__topic, { subtitle: item.__subtitle, items: [] });
+        }
+        byTopic.get(item.__topic).items.push(item);
+      }
+
+      $countShown.textContent = String(filtered.length);
+      $empty.style.display = filtered.length ? "none" : "block";
+
+      const topicsInOrder = RESOURCE_DATA.map(x => x.topic).filter(t => byTopic.has(t));
+
+      $sections.innerHTML = topicsInOrder.map(topic => {
+        const group = byTopic.get(topic);
+        const items = group.items;
+
+        return `
+          <details class="section" open>
+            <summary>
+              <div class="sect-left">
+                <div class="sect-title">${escapeHtml(topic)}</div>
+                <div class="sect-sub">${escapeHtml(group.subtitle)} • ${items.length} link(s)</div>
+              </div>
+              <div class="chev" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                  <path d="M6 9l6 6 6-6" stroke="white" opacity=".9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+            </summary>
+            <div class="cards">
+              ${items.map(it => `
+                <div class="card">
+                  <a href="${escapeHtml(it.url)}" target="_blank" rel="noopener noreferrer">
+                    <div class="card-title">
+                      ${escapeHtml(it.title)}
+                      ${it.tag ? `<span class="tag">${escapeHtml(it.tag)}</span>` : ""}
+                    </div>
+                    ${it.desc ? `<p class="desc">${escapeHtml(it.desc)}</p>` : ""}
+                    <div class="url">${escapeHtml(domainFromUrl(it.url))}</div>
+                  </a>
+                </div>
+              `).join("")}
+            </div>
+          </details>
+        `;
+      }).join("");
+    }
+
+    function init(){
+      buildPills();
+      render();
+
+      $search.addEventListener("input", (e) => {
+        state.q = e.target.value || "";
+        render();
+      });
+
+      $clearAll.addEventListener("click", (e) => {
+        e.preventDefault();
+        state.q = "";
+        state.topic = "All";
+        $search.value = "";
+        $pillbar.querySelectorAll(".pill").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.topic === "All")));
+        render();
+        $search.focus();
+      });
+
+      const d = new Date();
+      $lastUpdated.textContent = d.toLocaleDateString(undefined, { year: "numeric", month: "short", day: "numeric" });
+    }
+
+    init();
+  </script>
+</body>
+</html>
