@@ -368,7 +368,7 @@
     const $lastUpdated = document.getElementById("lastUpdated");
     const $clearAll = document.getElementById("clearAll");
 
-    const state = { q: "", topic: "All" };
+    const state = { q: "", topic: "All Courses" };
 
     const escapeHtml = (s) => String(s)
       .replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;")
@@ -380,7 +380,7 @@
     };
 
     function buildPills(){
-      const topics = ["All", ...RESOURCE_DATA.map(r => r.topic)];
+      const topics = ["All Courses", ...RESOURCE_DATA.map(r => r.topic)];
       $pillbar.innerHTML = topics.map(t => `
         <button class="pill" type="button" data-topic="${escapeHtml(t)}" aria-pressed="${t==="All"}">${escapeHtml(t)}</button>
       `).join("");
@@ -407,7 +407,7 @@
 
     function matches(item){
       const q = state.q.trim().toLowerCase();
-      const topicOk = state.topic === "All" ? true : item.__topic === state.topic;
+      const topicOk = state.topic === "All Courses" ? true : item.__topic === state.topic;
       if(!topicOk) return false;
       if(!q) return true;
       const hay = [item.title, item.tag||"", item.desc||"", item.url||"", item.__topic||""].join(" ").toLowerCase();
